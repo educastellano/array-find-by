@@ -1,4 +1,4 @@
-# find-by
+# Array.prototype.findBy
 
 Finds an element in an array of objects by attribute.
 
