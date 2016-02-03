@@ -1,5 +1,5 @@
 {
-  "name": "find-by",
+  "name": "array-find-by",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/educastellano/find-by.git"
+    "url": "git+ssh://git@github.com/educastellano/array-find-by.git"
   },
   "author": "Eduard Castellano",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/educastellano/find-by/issues"
+    "url": "https://github.com/educastellano/array-find-by/issues"
   },
-  "homepage": "https://github.com/educastellano/find-by#readme",
+  "homepage": "https://github.com/educastellano/array-find-by#readme",
   "devDependencies": {
     "tape": "^4.4.0"
   }
