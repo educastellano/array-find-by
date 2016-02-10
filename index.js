@@ -1,4 +1,4 @@
-//  Inspired by 'Array.prototype.includes' Polyfill: 
+//  Taken from 'Array.prototype.includes' Polyfill: 
 //      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
 module.exports = function(attribute, searchElement /*, fromIndex*/ ) {
   'use strict';
@@ -23,10 +23,10 @@ module.exports = function(attribute, searchElement /*, fromIndex*/ ) {
           (searchElement === currentElement[attribute] ||
            searchElement !== searchElement && currentElement[attribute] !== currentElement[attribute]) // NaN !== NaN
         ) { 
-      return currentElement;
+      return [currentElement, k];
     }
     k++;
   }
-  return null;
+  return [null, -1];
 };
 
