@@ -25,8 +25,18 @@ test('it should find by attribute of string type', function (t) {
     t.end();
 });
 
-test('it should return null if not found', function (t) {
+test('it should return [null, -1] if not found', function (t) {
     var _ = planets.findBy('name', 'Pluto'),
+        pluto = _[0], 
+        idx = _[1];
+    t.equals(pluto, null)
+    t.equals(idx, -1)
+    t.end();
+});
+
+
+test('it should return [null, -1] if length is 0', function (t) {
+    var _ = [].findBy('name', 'Pluto'),
         pluto = _[0], 
         idx = _[1];
     t.equals(pluto, null)
