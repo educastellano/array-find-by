@@ -5,7 +5,7 @@ module.exports = function(attribute, searchElement /*, fromIndex*/ ) {
   var O = Object(this);
   var len = parseInt(O.length) || 0;
   if (len === 0) {
-    return false;
+    return [null, -1];
   }
   var fromIndex = parseInt(arguments[2]) || 0;
   var k;

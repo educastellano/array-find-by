@@ -7,7 +7,7 @@ Finds an element in an array of objects by attribute.
 Import it:
 ```js
 
-    import findBy from 'find-by'
+    import findBy from 'array-find-by'
     
     if (!Array.prototype.findBy) {
         Array.prototype.findBy = findBy
