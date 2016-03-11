@@ -6,21 +6,30 @@ Finds an element in an array of objects by attribute.
 
 Import it:
 ```js
-
     import findBy from 'array-find-by'
     
+    let planets = [{id: 1, name: 'Saturn'}, {id: 2, name: 'Jupiter'}, {id: 3, name: 'Uranus'}]
+
+```
+Add it on the prototype...
+```js
     if (!Array.prototype.findBy) {
         Array.prototype.findBy = findBy
     }
-```
 
-Use it:
-```js
-    let planets = [{id: 1, name: 'Saturn'}, {id: 2, name: 'Jupiter'}, {id: 3, name: 'Uranus'}]
     let [jupiter, index] = planets.findBy('id', 2)
     // jupiter -> {id: 2, name: 'Jupiter'}
     // index   -> 1
 ```
+
+...or just use *Function.prototype.call()*:
+
+```js
+    let [jupiter, index] = findBy.call(planets, 'id', 2)
+    // jupiter -> {id: 2, name: 'Jupiter'}
+    // index   -> 1
+```
+
 ## Changelog
 
 * 2.0.0 
