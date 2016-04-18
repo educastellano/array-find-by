@@ -2,6 +2,10 @@
 
 Finds an element in an array of objects by attribute.
 
+# Install
+
+    npm install array-find-by --save
+
 # Usage
 
 Import it:
@@ -11,7 +15,16 @@ Import it:
     let planets = [{id: 1, name: 'Saturn'}, {id: 2, name: 'Jupiter'}, {id: 3, name: 'Uranus'}]
 
 ```
-Add it on the prototype...
+Call it...
+
+```js
+    let [jupiter, index] = findBy.call(planets, 'id', 2)
+    // jupiter -> {id: 2, name: 'Jupiter'}
+    // index   -> 1
+```
+
+...or add it on the prototype:
+
 ```js
     if (!Array.prototype.findBy) {
         Array.prototype.findBy = findBy
@@ -22,13 +35,6 @@ Add it on the prototype...
     // index   -> 1
 ```
 
-...or just use *Function.prototype.call()*:
-
-```js
-    let [jupiter, index] = findBy.call(planets, 'id', 2)
-    // jupiter -> {id: 2, name: 'Jupiter'}
-    // index   -> 1
-```
 
 ## Changelog
 
